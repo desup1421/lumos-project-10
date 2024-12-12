@@ -6,7 +6,7 @@ import HeaderContainer from "../containers/HeaderContainer";
 import WeCreateSection from "../components/WeCreateSection";
 // import NewInStoreSection from "../components/NewInStoreSection";
 import BestFurniture from "../components/BestFurniture";
-import AllProduct from "../components/AllProduct";
+import AllProductContainer from "../containers/AllProductContainer";
 import TestimonialSection from "../components/TestimonialSection";
 import MailingListSection from "../components/MailingListSection";
 import NewInStoreContainer from "../containers/NewInStoreContainer";
@@ -42,37 +42,37 @@ const Home: React.FC = () => {
         <HeaderContainer />
       </section>
 
-      <section className="px-5 lg:px-32 py-10 -mt-24 lg:-mt-40">
+      <section className="px-5 lg:px-32 py-20 -mt-24 lg:-mt-40">
         <DataContainer />
       </section>
 
       {/* WE CREATE YOUR HOME */}
-      <section className="px-5 lg:px-32 py-10">
+      <section className="px-5 lg:px-32 py-20">
         <WeCreateSection />
       </section>
 
       {/* NEW IN STORE */}
-      <section className="px-5 lg:px-32 py-10">
+      <section className="px-5 lg:px-32 py-20">
         <NewInStoreContainer />
       </section>
 
       {/* BEST FURNITURE */}
-      <section className="px-5 lg:px-32 py-10">
+      <section className="px-5 lg:px-32 py-20">
         <BestFurniture />
       </section>
 
       {/* ALL PRODUCT */}
-      <section className="px-5 lg:px-32 py-10">
-        <AllProduct />
+      <section className="px-5 lg:px-32 py-20">
+        <AllProductContainer />
       </section>
 
       {/* TESTIMONIAL */}
-      <section className="px-5 lg:px-32 py-10">
+      <section className="px-5 lg:px-32 py-20">
         <TestimonialSection />
       </section>
 
       {/* MAILING LIST */}
-      <section className="px-5 lg:px-32 py-10">
+      <section className="px-5 lg:px-32 py-20">
         <MailingListSection />
       </section>
     </>
