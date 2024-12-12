@@ -1,0 +1,21 @@
+DEADLINE: Jum'at, 13 Desember 2024. Pukul 17.00 WIB
+
+Design: https://www.figma.com/design/4oA2J1c6Q1jTQ1QTSPm55X/Furniture-Page?node-id=5-1205&t=UapO5dceGlUk2Izb-1
+API (Postman) : https://lumoshive-my.sharepoint.com/:u:/p/deni_irawan/Ec36CZiXvD1Nu4Myrj46Y64BwXylOTuASeW67aSBqOaFIg?e=IMLHRC
+
+Library: react-share-social (for icon's footer)
+https://www.npmjs.com/package/react-share-social
+- swiper (new in store)
+- pagination (all product)
+- pagination/ swiper (testimonial)
+- react-share-social (icons)
+
+Font: Saira
+Color: 
+-hijau (#286F6C)
+-hitam (#23262F)
+Topography:
+
+
+
+explore redux di typescrip, kuatin testing dan struktur (meta, schema markup)

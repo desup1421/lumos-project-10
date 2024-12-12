@@ -1,0 +1,39 @@
+Testing Setup:
+- Instal:
+npm install --save-dev @testing-library/react @testing-library/dom jest @babel/preset-env @babel/preset-react jest-environment-jsdom @testing-library/jest-dom @testing-library/user-event identity-obj-proxy jest-transform-stub
+
+- file (.babelrc)
+{
+  "presets": [
+    "@babel/preset-env",
+    ["@babel/preset-react", { "runtime": "automatic" }]
+  ]
+}
+
+- file (setupTests.js)
+import "@testing-library/jest-dom";
+
+- file (package.json)
+"scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage"
+}
+
+- util (node module)
+import { TextDecoder, TextEncoder } from "util";
+
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
+- file (jest.config.js)
+export default {
+  setupFilesAfterEnv: ["<rootDir>/setupTests.js"],
+  testEnvironment: "jsdom",
+  transform: {
+    "^.+\\.[jt]sx?$": "babel-jest", // Transform file JS, JSX, TS, dan TSX menggunakan Babel
+  },
+  moduleNameMapper: {
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy", // Mock file CSS
+    "\\.(svg|png|jpg|jpeg|gif)$": "jest-transform-stub", // Mock file gambar
+  },
+};
