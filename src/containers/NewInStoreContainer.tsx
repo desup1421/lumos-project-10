@@ -9,6 +9,11 @@ const NewInStoreContainer: React.FC = () => {
   const dispatch = useAppDispatch();
   const { categories, loading } = useAppSelector((state) => state.products);
 
+  interface Category {
+    title: string;
+    image: string;
+}
+
   useEffect(() => {
     dispatch(fetchCategories());
   }, [dispatch]);
@@ -29,7 +34,7 @@ const NewInStoreContainer: React.FC = () => {
       </div>
       <div className="flex gap-5 overflow-x-scroll scroll-smooth">
         {
-          categories.map((category, index) => (
+          categories.map((category:Category, index: number) => (
             <NewCard
               key={index}
               image={category.image}
