@@ -7,10 +7,12 @@ import WeCreateSection from "../components/WeCreateSection";
 // import NewInStoreSection from "../components/NewInStoreSection";
 import BestFurniture from "../components/BestFurniture";
 import AllProductContainer from "../containers/AllProductContainer";
-import TestimonialSection from "../components/TestimonialSection";
-import MailingListSection from "../components/MailingListSection";
+// import TestimonialSection from "../components/TestimonialSection";
+// import MailingListSection from "../components/MailingListSection";
 import NewInStoreContainer from "../containers/NewInStoreContainer";
 import DataContainer from "../containers/DataContainer";
+import TestimonialContainer from "../containers/TestimonialContainer";
+import SubscribeContainer from "../containers/SubscribeContainer";
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -68,12 +70,14 @@ const Home: React.FC = () => {
 
       {/* TESTIMONIAL */}
       <section className="px-5 lg:px-32 py-20">
-        <TestimonialSection />
+        <TestimonialContainer />
+        {/* <TestimonialSection /> */}
       </section>
 
       {/* MAILING LIST */}
       <section className="px-5 lg:px-32 py-20">
-        <MailingListSection />
+        <SubscribeContainer />
+        {/* <MailingListSection /> */}
       </section>
     </>
   );
