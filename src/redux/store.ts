@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import headerReducer from "./slices/headerSlice";
 import navbarReducer from "./slices/navbarSlice";
 import productReducer from "./slices/productSlice";
-import dataReducer from "./slices/DataSlice";
+import dataReducer from "./slices/dataSlice";
 import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({

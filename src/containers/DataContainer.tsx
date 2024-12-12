@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Data from "../components/Data";
 import { useAppSelector, useAppDispatch } from "../redux/hooks";
-import { fetchData } from "../redux/slices/DataSlice";
+import { fetchData } from "../redux/slices/dataSlice";
 import DataSkeleton from "../components/DataSkeleton";
 
 const DataContainer: React.FC = () => {
