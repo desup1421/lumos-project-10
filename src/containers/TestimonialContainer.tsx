@@ -4,6 +4,7 @@ import { useAppSelector, useAppDispatch } from "../redux/hooks";
 import { fetchTestimonials } from "../redux/slices/testimonialSlice";
 
 import arrow from "../assets/icons/arrow-black.svg";
+import arrow2 from "../assets/icons/arrow-white.svg";
 
 const TestimonialContainer: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -74,16 +75,18 @@ const TestimonialContainer: React.FC = () => {
           <button
             onClick={() => setPage(page - 1)}
             disabled={page === 1}
-            className="disabled:opacity-50 bg-white border p-3 rounded-full"
+            className="disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white bg-white border p-3 rounded-full group hover:bg-accent"
           >
-            <img className=" " src={arrow} alt="arrow icon" />
+            <img className=" group-hover:hidden" src={arrow} alt="arrow icon" />
+            <img className="hidden group-hover:block" src={arrow} alt="arrow icon" />
           </button>
           <button
             onClick={() => setPage(page + 1)}
             disabled={page === totalTestimonialPages}
-            className="disabled:opacity-50 bg-white border p-3 rounded-full"
+            className="disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white bg-white border p-3 rounded-full group hover:bg-accent"
           >
-            <img className=" rotate-180" src={arrow} alt="arrow icon" />
+            <img className="rotate-180 group-hover:hidden" src={arrow} alt="arrow icon" />
+            <img className="hidden group-hover:block" src={arrow2} alt="arrow icon" />
           </button>
         </div>
     </div>

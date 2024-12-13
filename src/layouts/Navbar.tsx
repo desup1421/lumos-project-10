@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
       <ul
         className={`flex flex-col gap-5 lg:gap-20 text-center lg:flex-row ${
           isOpen ? "flex" : "hidden"
-        } lg:flex`}
+        } lg:flex text-primary ${ isTransparent && 'lg:text-white'}`}
       >
         <Link onClick={toggleNavbar} to="/" className="text-xl font-bold lg:hidden mb-10">
           FurniShop
