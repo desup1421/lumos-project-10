@@ -11,6 +11,8 @@ const TestimonialContainer: React.FC = () => {
   const { testimonials, loading, totalTestimonialPages } = useAppSelector(
     (state) => state.testimonials
   );
+
+  console.log(testimonials);
   
   const [page, setPage] = useState(1);
 
