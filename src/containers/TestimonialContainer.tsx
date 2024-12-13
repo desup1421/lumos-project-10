@@ -12,7 +12,6 @@ const TestimonialContainer: React.FC = () => {
     (state) => state.testimonials
   );
 
-  console.log(testimonials);
   
   const [page, setPage] = useState(1);
 

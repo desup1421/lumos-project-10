@@ -11,7 +11,6 @@ export const subscribeEmail = createAsyncThunk(
       );
       return response.data;
     } catch (error) {
-      console.log(error);
       if (axios.isAxiosError(error)) {
         // Tangani error dari Axios
         return rejectWithValue(
