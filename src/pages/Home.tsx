@@ -4,11 +4,8 @@ import { setNAvbarTransparency } from "../redux/slices/navbarSlice";
 // COMPONENTS
 import HeaderContainer from "../containers/HeaderContainer";
 import WeCreateSection from "../components/WeCreateSection";
-// import NewInStoreSection from "../components/NewInStoreSection";
 import BestFurniture from "../components/BestFurniture";
 import AllProductContainer from "../containers/AllProductContainer";
-// import TestimonialSection from "../components/TestimonialSection";
-// import MailingListSection from "../components/MailingListSection";
 import NewInStoreContainer from "../containers/NewInStoreContainer";
 import DataContainer from "../containers/DataContainer";
 import TestimonialContainer from "../containers/TestimonialContainer";

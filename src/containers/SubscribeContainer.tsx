@@ -11,7 +11,6 @@ const SubscribeContainer: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
-    console.log(data);
     dispatch(subscribeEmail(data));
   };
 
