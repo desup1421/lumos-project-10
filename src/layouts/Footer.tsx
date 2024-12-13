@@ -1,38 +1,31 @@
 import React from "react";
-import instagram from "../assets/icons/instagram.svg";
-import twitter from "../assets/icons/twitter.svg";
-import facebook from "../assets/icons/facebook.svg";
-import github from "../assets/icons/github.svg";
+import { ShareSocial } from "react-share-social";
 
 const Footer: React.FC = () => {
+  const style = {
+    root: {
+      background: '#23262F',
+      borderRadius: 3,
+      border: 0,
+      color: 'white',
+      padding: '0'
+    },
+    copyContainer: {
+      display: 'none'
+    },
+  };
   return (
     <footer className="bg-primary text-white px-5 lg:px-32 grid gap-24">
       {/* FOOTER HEADER */}
       <header className="flex flex-col lg:flex-row justify-between lg:items-center pt-10 gap-10">
         <h2 className="font-bold text-3xl">FurniShop</h2>
         <div>
-          <ul className="flex justify-between gap-5">
-            <li className="p-5 bg-black/40 rounded-full ">
-              <a href="#">
-                <img className="w-5" src={instagram} alt="Instagram Logo" />
-              </a>
-            </li>
-            <li className="p-5 bg-black/40 rounded-full ">
-              <a href="#">
-                <img className="w-5" src={facebook} alt="Facebook Logo" />
-              </a>
-            </li>
-            <li className="p-5 bg-black/40 rounded-full ">
-              <a href="#">
-                <img className="w-5" src={twitter} alt="Twitter Logo" />
-              </a>
-            </li>
-            <li className="p-5 bg-black/40 rounded-full ">
-              <a href="#">
-                <img className="w-5" src={github} alt="Github Logo" />
-              </a>
-            </li>
-          </ul>
+          <ShareSocial
+            url="https://lumos-project-10.vercel.app/"
+            style={style}
+            socialTypes={["facebook", "twitter", "linkedin", "whatsapp"]}
+            onSocialButtonClicked={(data) => console.log(data)}
+          />
         </div>
       </header>
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { subscribeEmail } from "../redux/slices/emailSlice";
+import { subscribeEmail, resetStatus } from "../redux/slices/emailSlice";
 
 import banner from "../assets/images/lamp.png";
 
@@ -19,8 +19,9 @@ const SubscribeContainer: React.FC = () => {
     if(success) {
       alert('Berhasil');
       setData('');
+      dispatch(resetStatus());
     }
-  }, [success])
+  }, [success, dispatch])
 
   useEffect(() => {
     if(error) {

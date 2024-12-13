@@ -41,7 +41,14 @@ const initialState: EmailState = {
 const emailSlice = createSlice({
   name: "email",
   initialState,
-  reducers: {},
+  reducers: {
+    resetStatus: (state) => {
+      state.loading = false;
+      state.error = null;
+      state.success = false;
+      state.message = "";
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(subscribeEmail.pending, (state) => {
@@ -64,4 +71,5 @@ const emailSlice = createSlice({
   },
 });
 
+export const {resetStatus} = emailSlice.actions;
 export default emailSlice.reducer;
