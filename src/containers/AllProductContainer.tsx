@@ -36,14 +36,14 @@ const AllProductContainer: React.FC = () => {
         <button
           onClick={() => setPage(page - 1)}
           disabled={page === 1}
-          className="disabled:opacity-50 bg-white border p-3 rounded-full"
+          className="disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white bg-white border p-3 rounded-full group hover:bg-accent"
         >
           <img className=" " src={arrow} alt="arrow icon" />
         </button>
         <button
           onClick={() => setPage(page + 1)}
           disabled={page === totalProductPages}
-          className="disabled:opacity-50 bg-white border p-3 rounded-full"
+          className="disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white bg-white border p-3 rounded-full group hover:bg-accent"
         >
           <img className=" rotate-180" src={arrow} alt="arrow icon" />
         </button>
